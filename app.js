@@ -1,4 +1,4 @@
-// API information
+// URL information
 const url = 'https://raw.githubusercontent.com/HackersOfSweden/Ekonomy/main/Levfakturor_Lidingo_Stad_2018.json'
 
 //Selcting Elements
@@ -14,20 +14,25 @@ function ecoFunction(url){
     data.forEach(element => {
 
            // Creating elemnts for our data inside the main tag. 
-           const div = document.createElement('div');
+           const div = document.createElement('tr');
            //const leverantor = document.createElement('h1');
-           const forvalt = document.createElement('h1');
-           const konto = document.createElement('p');
-          
+           const forvalt = document.createElement('th');
+           const konto = document.createElement('th');
+           const leverantor = document.createElement('th')
+           const konterat = document.createElement('th')
            
    
            forvalt.innerHTML = `${element.forvaltning}`;
+           konterat.innerHTML = `${element.konterat}`;
            konto.innerHTML = `${element.konto}`;
-          // leverantor.innerHTML = `${element.leverantor}`;
+          leverantor.innerHTML = `${element.leverantor}`;
+
            
-         //  div.appendChild(leverantor);
-           div.appendChild(forvalt);
-           div.appendChild(konto);
+          div.appendChild(forvalt);
+          div.appendChild(konterat)
+          div.appendChild(konto);
+           div.appendChild(leverantor); 
+           
           main.appendChild(div);
        }); 
    });
