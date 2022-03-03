@@ -17,17 +17,17 @@ function ecoFunction(url){
            const div = document.createElement('div');
            //const leverantor = document.createElement('h1');
            const forvalt = document.createElement('h1');
-         //  const konto = document.createElement('h3');
+           const konto = document.createElement('p');
           
            
    
            forvalt.innerHTML = `${element.forvaltning}`;
-         //  konto.innerHTML = `${element.konto}`;
+           konto.innerHTML = `${element.konto}`;
           // leverantor.innerHTML = `${element.leverantor}`;
            
          //  div.appendChild(leverantor);
            div.appendChild(forvalt);
-        //   div.appendChild(konto);
+           div.appendChild(konto);
           main.appendChild(div);
        }); 
    });

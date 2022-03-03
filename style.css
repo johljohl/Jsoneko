@@ -1,11 +1,23 @@
 main div{
-    width: 550px;
-    height: 780px;
+    width: 600px;
+    height: 80px;
     margin: 19px 15px;
     background: black;
     border-radius: 20px;
-      }
-      h1{
-        margin: 0 20px;
-        color: #fff;
-    }
+    margin: auto;
+}
+ h1{
+    margin:  20px;
+    color: #fff;
+}
+body {
+  background-image: url("stadhus.jpg");
+  background-repeat: no-repeat;
+}
+p {
+  margin: 0 10px;
+  color: #fff;
+  box-sizing: border-box;
+  background-color: red;
+  border-radius: 20px;
+  }
