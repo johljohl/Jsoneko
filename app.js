@@ -11,28 +11,33 @@ ecoFunction(url);
 function ecoFunction(url){
     fetch(url).then(res => res.json())
     .then(function(data){
-    data.forEach(element => {
+    data.forEach(data => {
 
            // Creating elemnts for our data inside the main tag. 
            const div = document.createElement('tr');
            //const leverantor = document.createElement('h1');
-           const forvalt = document.createElement('th');
-           const konto = document.createElement('th');
-           const leverantor = document.createElement('th')
-           const konterat = document.createElement('th')
+           const forvalt = document.createElement('td');
+           const konto = document.createElement('td');
+           const leverantor = document.createElement('td')
+           const konterat = document.createElement('td')
+           const org = document.createElement('td')
+           const fakt = document.createElement('td')
            
    
-           forvalt.innerHTML = `${element.forvaltning}`;
-           konterat.innerHTML = `${element.konterat}`;
-           konto.innerHTML = `${element.konto}`;
-          leverantor.innerHTML = `${element.leverantor}`;
-
+           forvalt.innerHTML = data.forvaltning;
+           konterat.innerHTML = data.konterat
+        
+           konto.innerHTML = data.konto;
+           leverantor.innerHTML = data.leverantor;
+           org.innerHTML = data['org.nr'];
+           fakt.innerHTML = data['fakt.nr'];
            
+          div.appendChild(fakt); 
           div.appendChild(forvalt);
           div.appendChild(konterat)
           div.appendChild(konto);
-           div.appendChild(leverantor); 
-           
+          div.appendChild(leverantor); 
+          div.appendChild(org)
           main.appendChild(div);
        }); 
    });
