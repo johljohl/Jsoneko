@@ -15,7 +15,7 @@ function ecoFunction(url){
 
            // Creating elemnts for our data inside the main tag. 
            const div = document.createElement('tr');
-           //const leverantor = document.createElement('h1');
+
            const forvalt = document.createElement('td');
            const konto = document.createElement('td');
            const leverantor = document.createElement('td')
