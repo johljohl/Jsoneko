@@ -30,9 +30,7 @@ tr {
   img {
     display: block;
     
-    margin-left: auto;
-    margin-right: auto;
-    
+   
   }
   footer {
     background-color: #5cb3fd;
@@ -47,5 +45,8 @@ tr {
     margin: auto;
   }
   table{
+    margin: auto;
+  }
+  .sport {
     margin: auto;
   }
